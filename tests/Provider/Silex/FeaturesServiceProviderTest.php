@@ -1,6 +1,6 @@
 <?php
 
-namespace Silex\Tests\Provider;
+namespace Feature\Tests\Provider\Silex;
 
 use Silex\Application;
 use Feature\Provider\Silex\FeaturesServiceProvider;
