@@ -18,15 +18,23 @@ class NodeTest extends \Twig_Test_NodeTestCase
     public function getTests()
     {
         $body = new \Twig_Node(array(new \Twig_Node_Text('nothing', 2)));
-        $node = new Node('foo', 'a', $body, 1);
+        $nodeFoo = new Node('foo', 'a', $body, 1);
 
-        return array(
-            array(
-                $node,
-                "// line 1\nif (\$context['features']->variant('foo') == 'a') {\n".
-                "    // line 2\n    echo \"nothing\";\n".
-                "}"
-            )
+        $tests[] = array(
+            $nodeFoo,
+            "// line 1\nif (\$context['features']->variant('foo') == 'a') {\n".
+            "    // line 2\n    echo \"nothing\";\n".
+            "}"
         );
+
+        $nodeBar = new Node('bar', '', $body, 1);
+        $tests[] = array(
+            $nodeBar,
+            "// line 1\nif (\$context['features']->variant('bar')) {\n".
+            "    // line 2\n    echo \"nothing\";\n".
+            "}"
+        );
+
+        return $tests;
     }
 }
