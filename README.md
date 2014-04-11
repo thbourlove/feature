@@ -1,13 +1,9 @@
 # Feature
 [![Build Status](https://travis-ci.org/thbourlove/feature.png?branch=master)](https://travis-ci.org/thbourlove/feature)
 
-## What?
-
 Feature API used for operational Dark Launching ad A/B Testing.
 
-## How?
-
-### Install With Composer:
+## Install With Composer:
 
 ```json
 "require": {
@@ -15,7 +11,7 @@ Feature API used for operational Dark Launching ad A/B Testing.
 }
 ```
 
-### Features Example:
+## Features Example:
 ```php
 <?php
 
@@ -45,7 +41,7 @@ echo var_export($features->variant('featureD')), "\n"; // 'd'
 echo var_export($features->variant('featureZ')), "\n"; // false
 ```
 
-### Service Provider With Silex:
+## Service Provider With Silex:
 ```php
 <?php
 
@@ -65,7 +61,7 @@ $app['features.config'] = array(
 echo var_export($app['features']->variant('featureA')), "\n"; // true
 ```
 
-### With Twig:
+## With Twig:
 
 ##### in php:
 ```php
