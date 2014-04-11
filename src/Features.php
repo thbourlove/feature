@@ -18,11 +18,10 @@ class Features
             return $this->features['default']($name);
         }
         $feature = $this->features[$name];
-        if (is_bool($feature)) {
-            return $feature;
-        } elseif (is_callable($feature)) {
+        if (is_callable($feature)) {
             return $feature();
+        } else {
+            return $feature;
         }
-        return false;
     }
 }

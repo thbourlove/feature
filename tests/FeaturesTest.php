@@ -18,6 +18,8 @@ class FeaturesTest extends \PHPUnit_Framework_TestCase
             'featureC' => function () use ($user) {
                 return $user['name'] == 'a' ? 'foo' : 'bar';
             },
+            'featureD' => 'd',
+            'featureE' => 1,
         );
         $features = new Features($config);
         foreach ($variations as $name => $result) {
@@ -37,7 +39,9 @@ class FeaturesTest extends \PHPUnit_Framework_TestCase
                     'featureA' => true,
                     'featureB' => true,
                     'featureC' => 'foo',
-                    'featureD' => false,
+                    'featureD' => 'd',
+                    'featureE' => 1,
+                    'featureZ' => false,
                 )
             ),
             array(
@@ -49,7 +53,9 @@ class FeaturesTest extends \PHPUnit_Framework_TestCase
                     'featureA' => true,
                     'featureB' => false,
                     'featureC' => 'bar',
-                    'featureD' => false,
+                    'featureD' => 'd',
+                    'featureE' => 1,
+                    'featureZ' => false,
                 )
             ),
         );
