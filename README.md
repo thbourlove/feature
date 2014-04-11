@@ -94,7 +94,7 @@ echo $twig->render('foo.twig');
 ```
 
 ##### in twig:
-```twig
+```jinja
 {% feature foo %}
 foo ok
 {% endfeature %}
