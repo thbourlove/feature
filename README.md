@@ -1,4 +1,5 @@
 # Feature
+[![Build Status](https://travis-ci.org/thbourlove/feature.png?branch=master)](https://travis-ci.org/thbourlove/feature)
 
 ## What?
 
