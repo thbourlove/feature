@@ -6,7 +6,7 @@ use Feature\Provider\Twig\Feature;
 require_once(__DIR__.'/../vendor/autoload.php');
 
 $options = getopt('u:');
-$user = $options['u'] === 'admin' ? 'admin' : 'user';
+$user = isset($options['u']) && $options['u'] === 'admin' ? 'admin' : 'user';
 
 $config = array(
     'foo' => true,
