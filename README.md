@@ -61,7 +61,7 @@ $app['features.config'] = array(
 echo var_export($app['features']->variant('featureA')), "\n"; // true
 ```
 
-## With Twig:
+## Twig Extension:
 
 ##### in php:
 ```php
