@@ -1,0 +1,11 @@
+--TEST--
+"feature" tag
+--TEMPLATE--
+{% feature bar - a %}
+ok
+{% endfeature %}
+nothing
+--DATA--
+return array()
+--EXPECT--
+nothing
