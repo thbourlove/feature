@@ -12,7 +12,7 @@ class FeaturesServiceProvider implements ServiceProviderInterface
         $app['features'] = $app->share(function ($app) {
             return new Features($app['features.config']);
         });
-        $app['features.config'] = [];
+        $app['features.config'] = array();
     }
 
     public function boot(Application $app)

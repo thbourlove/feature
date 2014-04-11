@@ -3,7 +3,7 @@ namespace Feature;
 
 class Features
 {
-    private $features = [];
+    private $features = array();
 
     public function __construct(array $config)
     {
