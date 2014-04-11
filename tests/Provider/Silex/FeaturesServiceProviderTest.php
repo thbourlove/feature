@@ -4,7 +4,6 @@ namespace Silex\Tests\Provider;
 
 use Silex\Application;
 use Feature\Provider\Silex\FeaturesServiceProvider;
-use Symfony\Component\HttpFoundation\Request;
 
 class FeaturesServiceProviderTest extends \PHPUnit_Framework_TestCase
 {
