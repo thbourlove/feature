@@ -21,10 +21,12 @@ Feature API used for operational Dark Launching ad A/B Testing.
 
 use Feature\Features;
 
+require_once(__DIR__.'/../vendor/autoload.php');
+
 $user = array(
     'name' => 'a',
     'admin' => false,
-),
+);
 $config = array(
     'featureA' => true,
     'featureB' => function () use ($user) {
@@ -36,11 +38,11 @@ $config = array(
     'featureD' => 'd',
 );
 $features = new Features($config);
-$features->variant('featureA'); // true
-$features->variant('featureB'); // false
-$features->variant('featureC'); // 'foo'
-$features->variant('featureD'); // 'd'
-$features->variant('featureZ'); // false
+echo var_export($features->variant('featureA')), "\n"; // true
+echo var_export($features->variant('featureB')), "\n"; // false
+echo var_export($features->variant('featureC')), "\n"; // 'foo'
+echo var_export($features->variant('featureD')), "\n"; // 'd'
+echo var_export($features->variant('featureZ')), "\n"; // false
 ```
 
 ### Service Provider With Silex:
@@ -50,6 +52,8 @@ $features->variant('featureZ'); // false
 use Silex\Application;
 use Feature\Provider\Silex\FeaturesServiceProvider;
 
+require_once(__DIR__.'/../vendor/autoload.php');
+
 $app = new Application();
 
 $app->register(new FeaturesServiceProvider);
@@ -58,5 +62,46 @@ $app['features.config'] = array(
     'featureA' => true,
 );
 
-$app['features']->variant('featureA'); // true
+echo var_export($app['features']->variant('featureA')), "\n"; // true
+```
+
+### With Twig:
+
+##### in php:
+```php
+<?php
+
+use Feature\Features;
+use Feature\Provider\Twig\Feature;
+
+require_once(__DIR__.'/../vendor/autoload.php');
+
+$options = getopt('u:');
+$user = $options['u'] === 'admin' ? 'admin' : 'user';
+
+$config = array(
+    'foo' => true,
+    'bar' => function () use ($user) {
+        return $user === 'admin' ? 'admin' : 'user';
+    },
+);
+$features = new Features($config);
+
+$loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
+$twig = new Twig_Environment($loader);
+$twig->addExtension(new Feature($features));
+echo $twig->render('foo.twig');
+```
+
+##### in twig:
+```twig
+{% feature foo %}
+foo ok
+{% endfeature %}
+{% feature bar - admin %}
+bar admin
+{% endfeature %}
+{% feature bar - user %}
+bar user
+{% endfeature %}
 ```
