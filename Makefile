@@ -5,3 +5,6 @@ cscope:
 	find . -name '*.php' > ./cscope.files
 	cscope -b
 	rm cscope.files
+
+test:
+	phpunit --coverage-text
