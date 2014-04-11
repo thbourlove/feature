@@ -1,5 +1,5 @@
 {
-    "name": "feature/feature",
+    "name": "thbourlove/feature",
     "description": "Feature API used for operational Dark Launching ad A/B Testing.",
     "require-dev": {
         "silex/silex": "~1.1",
@@ -8,7 +8,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "thbourlove",
+            "name": "Hongbo Tang",
             "email": "thbourlove@gmail.com"
         }
     ],
