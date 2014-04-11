@@ -7,7 +7,7 @@ Feature API used for operational Dark Launching ad A/B Testing.
 
 ## How?
 
-### With Composer:
+### Install With Composer:
 
 ```json
 "require": {
@@ -15,7 +15,7 @@ Feature API used for operational Dark Launching ad A/B Testing.
 }
 ```
 
-### Example:
+### Features Example:
 ```php
 <?php
 
@@ -43,7 +43,7 @@ $features->variant('featureD'); // 'd'
 $features->variant('featureZ'); // false
 ```
 
-### With Silex:
+### Service Provider With Silex:
 ```php
 <?php
 
