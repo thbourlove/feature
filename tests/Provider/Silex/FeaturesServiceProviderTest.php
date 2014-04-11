@@ -4,14 +4,19 @@ namespace Silex\Tests\Provider;
 
 use Silex\Application;
 use Feature\Provider\Silex\FeaturesServiceProvider;
+use Symfony\Component\HttpFoundation\Request;
 
 class FeaturesServiceProviderTest extends \PHPUnit_Framework_TestCase
 {
     public function testRegister()
     {
         $app = new Application();
-
         $app->register(new FeaturesServiceProvider);
+
+        $app->get('/', function () {
+        });
+        $request = Request::create('/');
+        $app->handle($request);
 
         $this->assertInstanceOf('Feature\Features', $app['features']);
     }
