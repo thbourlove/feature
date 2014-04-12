@@ -8,3 +8,6 @@ cscope:
 
 test:
 	phpunit --coverage-text
+
+build:
+	composer install
