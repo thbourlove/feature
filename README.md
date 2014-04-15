@@ -1,6 +1,7 @@
 # Feature
 [![Build Status](https://travis-ci.org/thbourlove/feature.png?branch=master)](https://travis-ci.org/thbourlove/feature)
 [![Coverage Status](https://coveralls.io/repos/thbourlove/feature/badge.png?branch=master)](https://coveralls.io/r/thbourlove/feature?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/3f166f53-7f52-4f66-9ab6-6a2ec36713f7/mini.png)](https://insight.sensiolabs.com/projects/3f166f53-7f52-4f66-9ab6-6a2ec36713f7)
 
 Feature API used for operational Dark Launching ad A/B Testing.
 
