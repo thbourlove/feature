@@ -1,9 +1,19 @@
+{% feature css %}
+<link rel="stylesheet" href="/css/global.css" type="text/css" media="screen" charset="utf-8">
+{% endfeature %}
+
 {% feature foo %}
 foo ok
 {% endfeature %}
+
 {% feature bar - admin %}
+{% feature css %}<p class="bar admin">{% endfeature %}
 bar admin
+{% feature css %}</p>{% endfeature %}
 {% endfeature %}
+
 {% feature bar - user %}
+{% feature css %}<p class="bar user">{% endfeature %}
 bar user
+{% feature css %}</p>{% endfeature %}
 {% endfeature %}

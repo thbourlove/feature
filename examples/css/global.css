@@ -1,0 +1,10 @@
+.bar {
+  font-size: 26px;
+  color: blue;
+}
+.bar.admin {
+  color: red;
+}
+.bar.user {
+  color: green;
+}

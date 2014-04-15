@@ -11,3 +11,6 @@ test:
 
 build:
 	composer install
+
+server:
+	php -S 0.0.0.0:8000 -t examples/
