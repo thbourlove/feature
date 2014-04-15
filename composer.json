@@ -1,5 +1,5 @@
 {
-    "name": "thbourlove/feature",
+    "name": "eleme/feature",
     "description": "Feature API used for operational Dark Launching ad A/B Testing.",
     "require-dev": {
         "silex/silex": "~1.1",

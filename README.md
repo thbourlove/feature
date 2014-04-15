@@ -9,7 +9,7 @@ Feature API used for operational Dark Launching ad A/B Testing.
 
 ```json
 "require": {
-    "feature/feature": "dev-master"
+    "eleme/feature": "~0.1"
 }
 ```
 
