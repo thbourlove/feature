@@ -1,6 +1,6 @@
 # Feature
 [![Build Status](https://travis-ci.org/thbourlove/feature.png?branch=master)](https://travis-ci.org/thbourlove/feature)
-[![Coverage Status](https://coveralls.io/repos/thbourlove/feature/badge.png)](https://coveralls.io/r/thbourlove/feature)
+[![Coverage Status](https://coveralls.io/repos/thbourlove/feature/badge.png?branch=master)](https://coveralls.io/r/thbourlove/feature?branch=master)
 
 Feature API used for operational Dark Launching ad A/B Testing.
 
