@@ -8,7 +8,7 @@ class Features
 
     public function __construct(array $config)
     {
-        $this->features = array_merge($config, array('default' => function ($name) {
+        $this->features = array_merge($config, array('default' => function () {
             return false;
         }));
     }
