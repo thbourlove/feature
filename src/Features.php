@@ -8,9 +8,9 @@ class Features
 
     public function __construct(array $config)
     {
-        $this->features = array_merge($config, array('default' => function () {
+        $this->features = array_merge(array('default' => function () {
             return false;
-        }));
+        }), $config);
     }
 
     public function variant($name)
