@@ -5,7 +5,7 @@ class Node extends \Twig_Node
 {
     public function __construct($name, $value, \Twig_NodeInterface $body, $lineno, $tag = 'feature')
     {
-        parent::__construct(compact('body'), compact('name', 'value'), $lineno, $tag);
+        parent::__construct(array('body' => $body), array('name' => $name, 'value' => $value), $lineno, $tag);
     }
 
     public function compile(\Twig_Compiler $compiler)
